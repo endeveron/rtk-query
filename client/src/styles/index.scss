@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import './vars/colors.scss';
+@import './vars/sizes.scss';
+
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  
+  color: $c-common-black;
+  background-color: $c-common-white;
+  
+  cursor: default;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol,
+p {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+::placeholder {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+
+.page {
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  // letter-spacing: 0.03125rem;
+  padding-right: $s-page-padding-h-sm; 
+  padding-left: $s-page-padding-h-sm; 
+
+  padding-top: $s-page-padding-v-sm;
+  padding-bottom: $s-page-padding-v-sm;
+}
+
+
+.content-wrapper {
+  padding-top: $s-page-padding-v-sm;
+  padding-bottom: $s-page-padding-v-sm;
+}
+
+
+/* Max-width */
+
+.page,
+.navigation {
+  max-width: $s-page-max-width-sm;
+  margin: 0 auto;
+}
+
+
+/* scrollbar */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $c-scrollbar $c-app-bg; /* thumb, track */
+}
+
+/* Chrome, Edge, and Safari */
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: $c-app-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: $c-scrollbar;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $c-scrollbar-hover;
+}
+
+
+/* Animation */
+
+.anim {
+
+  &--appear {
+    animation: appear 0.25s ease;
+  }
+
+  &--page-appear {
+    animation: appear 0.2s ease-out;
+  }
+}

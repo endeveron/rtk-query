@@ -1,0 +1,1 @@
+export type StateParamStatus = 'idle' | 'loading' | 'error'

@@ -1,0 +1,68 @@
+
+$c-common-black:     #1a1a1a;
+$c-common-white:     #ffffff;
+
+$c-primary-light:    #42a5f5;
+$c-primary-main:     #1975d2;
+$c-primary-dark:     #1565c0;
+
+$c-secondary-light:  #bb69c9;
+$c-secondary-main:   #9b27b0;
+$c-secondary-dark:   #7b1fa3;
+
+$c-error-light:      #ef5552;
+$c-error-main:       #d33131;
+$c-error-dark:       #c72929;
+
+$c-warning-light:    #ff9800;
+$c-warning-main:     #ed6c02;
+$c-warning-dark:     #e65100;
+
+$c-info-light:       #03a9f4;
+$c-info-main:        #0288d1;
+$c-info-dark:        #01579b;
+
+$c-success-light:    #4caf50;
+$c-success-main:     #2e7d32;
+$c-success-dark:     #1b5e20;
+
+$c-neutral-light:    #8391a5;
+$c-neutral-main:     #64748b;
+$c-neutral-dark:     #4a5666;
+
+$c-divider:          #bcc1c9;
+$c-app-bg:           #ffffff;
+
+$c-scrollbar: $c-neutral-light;
+$c-scrollbar-hover: $c-neutral-main;
+
+
+:export {
+  primaryMain: $c-primary-main;
+  primaryLight: $c-primary-light;
+  primaryDark: $c-primary-dark;
+
+  secondaryMain: $c-secondary-main;
+  secondaryLight: $c-secondary-light;
+  secondaryDark: $c-secondary-dark;
+
+  errorMain: $c-error-main;
+  errorLight: $c-error-light;
+  errorDark: $c-error-dark;
+
+  warningMain: $c-warning-main;
+  warningLight: $c-warning-light;
+  warningDark: $c-warning-dark;
+
+  infoMain: $c-info-main;
+  infoLight: $c-info-light;
+  infoDark: $c-info-dark;
+  
+  successMain: $c-success-main;
+  successLight: $c-success-light;
+  successDark: $c-success-dark;
+  
+  neutralMain: $c-neutral-main;
+  neutralLight: $c-neutral-light;
+  neutralDark: $c-neutral-dark;
+}
