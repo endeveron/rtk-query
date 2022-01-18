@@ -8,13 +8,20 @@ import type { User } from '../../types/User'
 // define a service using a base URL and expected endpoints
 export const userAPI = createApi({
   reducerPath: 'userAPI',
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_SERVER_URL }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_LOCAL_DB_URL }),
   endpoints: builder => ({
     getUsers: builder.query<User[], string>({
-      query: () => `/users`,
+      query: () => `users`,
     }),
     getUserById: builder.query<User, string>({
-      query: (id = '') => `/users/${id}`,
+      query: (id = '') => `users/${id}`,
+    }),
+    addUser: builder.mutation({
+      query: (body) => ({
+        url: 'users',
+        method: 'POST',
+        body,
+      })
     })
   })
 })
@@ -23,4 +30,5 @@ export const userAPI = createApi({
 export const { 
   useGetUsersQuery,
   useGetUserByIdQuery,
+  useAddUserMutation,
 } = userAPI
