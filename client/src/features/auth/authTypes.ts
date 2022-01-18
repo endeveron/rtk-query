@@ -1,4 +1,4 @@
-import { StateParamStatus } from '../../models/stateParamStatus'
+import { StateParamStatus } from '../../types/stateParamStatus'
 
 
 // redux state

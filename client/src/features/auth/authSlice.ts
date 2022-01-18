@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { StateParamStatus } from '../../models/stateParamStatus'
-import { AuthData, AuthState } from './authModels'
+import { StateParamStatus } from '../../types/stateParamStatus'
+import { AuthData, AuthState } from './authTypes'
 
 const initialState: AuthState = {
   token: {

@@ -6,12 +6,17 @@ import {
 } from 'react-router-dom'
 
 import Auth from '../components/pages/Auth/Auth'
+import Products from '../components/pages/Users/Users'
 
 
 const AppRoutes = () => {
   let routes = (
     <Routes>
       <Route
+        path="/"
+        element={ <Products /> }
+      />
+      {/* <Route
         path="auth"
         element={ <Auth /> }
       />
@@ -21,7 +26,7 @@ const AppRoutes = () => {
 
       // replace a nav item in a navigation stack
       // element={ <Navigate replace to="/auth" /> }
-      />
+      /> */}
     </Routes>
   )
 
