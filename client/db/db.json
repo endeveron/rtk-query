@@ -1,24 +1,20 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "User 1"
+      "name": "Updated User",
+      "id": 1
     },
     {
       "id": 2,
-      "name": "User 2"
+      "name": "User"
     },
     {
       "id": 3,
-      "name": "User 3"
+      "name": "User"
     },
     {
-      "name": "New User",
+      "name": "User",
       "id": 4
-    },
-    {
-      "name": "New User",
-      "id": 5
     }
   ]
 }
