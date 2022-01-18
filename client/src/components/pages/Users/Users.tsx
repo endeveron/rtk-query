@@ -3,7 +3,8 @@ import { Button } from '@mui/material'
 import {
   useGetUsersQuery,
   useAddUserMutation,
-  useUpdateUserMutation
+  useUpdateUserMutation,
+  useDeleteUserMutation,
 } from '../../../store/services/userAPI'
 
 import './Users.scss'
@@ -13,6 +14,7 @@ const Users = () => {
   const { data: users = [], isLoading: isGetUsersLoading } = useGetUsersQuery()
   const [addUser, { isLoading: isAddUserLoading }] = useAddUserMutation()
   const [updateUser, { isLoading: isUpdateUserLoading }] = useUpdateUserMutation()
+  const [deleteUser, { isLoading: isDeleteUserLoading }] = useDeleteUserMutation()
 
 
   const addUserHandler = async () => {
@@ -38,6 +40,15 @@ const Users = () => {
     }
   }
 
+  const deleteUserHandler = async (id: number) => {
+    try {
+      const payload = await deleteUser(id).unwrap()
+      console.log('fulfilled', payload)
+    } catch (error) {
+      console.log('rejected', error)
+    }
+  }
+
   const loadingEl = (
     <div>Loading...</div>
   )
@@ -46,7 +57,11 @@ const Users = () => {
     <div className="user-list">
       { isGetUsersLoading ? loadingEl :
         users.map(user => (
-          <div className="user" key={ user.id } >
+          <div
+            className="user"
+            key={ user.id }
+            onClick={ () => deleteUserHandler(user.id) }
+          >
             <div className="user__name" >
               { user.name + user.id }
             </div>
